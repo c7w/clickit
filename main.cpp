@@ -37,6 +37,7 @@ int get(int x, int y)
 
 //点击相对坐标，为周围增加值（增加一定次数）
 void click(int x, int y, int clickTime) {
+	if (x <= 0 || x > ::size || y <= 0 || y > ::size) return;
 	add(x, y, clickTime);
 	add(x + 1, y, clickTime);
 	add(x - 1, y, clickTime);
